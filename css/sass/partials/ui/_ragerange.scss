@@ -1,0 +1,185 @@
+body {
+	font-family: helvetica, arial, sans serfif;
+	line-height: 1.3;
+	background-color: whitesmoke;
+	color: #555;
+	font-size: 12px;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+input, textarea {
+	outline: 0;
+	box-shadow: none!important;
+	padding: 5px;
+	width: 100%;
+	border-width: 0;
+	background: 0 0;
+}
+
+@mixin cf {
+	*zoom: 1;
+	&:before,
+	&:after {
+			content: " ";
+			display: table;
+	}
+	&:after {
+			clear: both;
+	}
+}
+.container {
+	width: 80%;
+	min-width: 260px;
+	margin: 3em auto;
+}
+.ui-element {
+	padding: 1.5em;
+	font-size: 13px;
+	background-color: #fff;
+	border: 1px solid #dfdfdf;
+	margin-bottom: 1em;
+	@include cf;
+	.label {
+		font-weight: bold;
+		width: 20%;
+		min-width: 100px;
+		float: left;
+		margin-bottom: 10px;
+	}
+	.lever {
+		width: 80%;
+		float: left;
+	}
+
+}
+
+.checkboxes, .radiobuttons {
+	width: 50%;
+	float: left;
+}
+
+input[type=checkbox].custom-checkbox, input[type=radio].custom-radio, input[type=range].custom-range {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	margin: 0;
+	outline: none !important;
+	opacity: 0;
+}
+
+// VARIABLES
+
+$color-bg-active: #35A859;
+$color-bg-disabled: #eaeaea;
+
+
+body.select-none {
+	user-select: none;
+}
+// SLIDERS
+.slider-container {
+	width: 100%;
+	.slider {
+		width: 100%;
+		min-width: 200px;
+		height: 10px;
+		background-color: #f3f3f3;
+		border-radius: 5px;
+		position: relative;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		float: left;
+		&.with-labels {
+			margin-top: 5px;
+			margin-bottom: 25px;
+			&:before {
+				content: attr(data-value-first);
+				position: absolute;
+				color: #888;
+				font-size: 10px;
+				top: 20px;
+				left: 0;
+				text-align: center;
+				transform: translateX(-10%);
+			}
+			&:after {
+				content: attr(data-value-last);
+				position: absolute;
+				font-size: 10px;
+				color: #888;
+				top: 20px;
+				right: 0;
+				text-align: center;
+				transform: translateX(10%);
+			}
+		}
+		.divisions {
+			float: left;
+			width: 6px;
+			height: 6px;
+			background-color: #ccc;
+			border-radius: 100%;
+			position: absolute;
+			top: 2px;
+			margin-left: -5px;
+		}
+		&.with-labels .divisions:before {
+				content: attr(data-value);
+				position: absolute;
+				font-size: 11px;
+				color: #888;
+				top: 18px;
+				left: 3px;
+				text-align: center;
+				transform: translateX(-50%);
+			}
+		.slider-range {
+			position: relative;
+			background-color: $color-bg-normal;
+			height: 100%;
+			border-radius: 5px;
+		}
+		.slider-handle {
+				content: "";
+				position: absolute;
+				margin-left: -10px;
+				z-index: 5;
+				top: -5px;
+				height: 20px;
+				width: 20px;
+				background-color: darken($color-bg-normal, 5);
+				transition: background-color .2s ease;
+				transition: box-shadow .2s ease;
+				border-radius: 100%;
+				user-select: none;
+				border: 2px solid #fff;
+				box-shadow: 0 0 0 2px darken($color-bg-normal, 5);
+				&:hover , &:active {
+					background-color: lighten($color-bg-normal, 5);
+
+					cursor: pointer;
+				}
+				&:active {
+					box-shadow: 0 0 0 7px rgba(56, 118, 180, .5);
+				}
+			}
+	} //slider
+	&.with-input .slider {
+		width: 80%;
+		margin-right: 5%;
+	}
+	.input {
+		width: 15%;
+		min-width: 50px;
+		float: left;
+		border: 1px solid #dfdfdf;
+		border-radius: 2px;
+		margin: 0;
+	}
+} //slider-container

@@ -1,0 +1,501 @@
+$icon-font-uri: '../fonts/Qnet-Regular-1.034';
+
+@font-face {
+    font-family: 'qnet-icons';
+    src: url($icon-font-uri + '.eot');
+    src: url($icon-font-uri + '.eot?#iefix') format('embedded-opentype'),
+         url($icon-font-uri + '.woff') format('woff'),
+         url($icon-font-uri + '.ttf') format('truetype'),
+         url($icon-font-uri + '.svg#qnet-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    @include icon;
+}
+
+.childQuestion .field:before, .sideContent .childAnswer:before {
+    font-family: 'qnet-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fonticon-tiny, .fonticon-small, .fonticon-medium, .fonticon-large, .fonticon-xlarge, .fonticon-nosize {
+    font-family: 'qnet-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Icon font size scale */
+
+.fonticon-tiny {
+    font-size: 8px;
+}
+.fonticon-small {
+    font-size: 16px;
+}
+.fonticon-medium {
+    font-size: 32px;
+}
+.fonticon-large {
+    font-size: 48px;
+}
+.fonticon-xlarge {
+    font-size: 64px;
+}
+
+
+.fonticon-dashboard:before {
+    content: "\F100";
+}
+.fonticon-change:before,
+.fonticon-forms:before {
+    content: "\F101";
+}
+.fonticon-ordersv2:before {
+    content: "\F102";
+}
+.fonticon-documentation:before {
+    content: "\F103";
+}
+.fonticon-metrics:before {
+    content: "\F104";
+}
+.fonticon-workplace:before {
+    content: "\F105";
+}
+.fonticon-governance:before {
+    content: "\F106";
+}
+.fonticon-administration:before {
+    content: "\F107";
+}
+.fonticon-helpdesk:before,
+.fonticon-helpdesk_newticket:before {
+    content: "\F108";
+}
+.fonticon-qshop:before {
+    content: "\F109";
+}
+.fonticon-menu:before {
+    content: "\F10a";
+}
+.fonticon-time:before {
+    content: "\F10b";
+}
+.fonticon-date:before {
+    content: "\F10c";
+}
+.fonticon-settings:before,
+.fonticon-administration_configuration:before {
+    content: "\F10d";
+}
+.fonticon-favorite:before {
+    content: "\F10e";
+}
+.fonticon-sort:before {
+    content: "\F10f";
+}
+.fonticon-download:before {
+    content: "\F110";
+}
+.fonticon-upload:before {
+    content: "\F111";
+}
+.fonticon-filter:before {
+    content: "\F112";
+}
+.fonticon-search:before {
+    content: "\F113";
+}
+.fonticon-edit:before {
+    content: "\F114";
+}
+.fonticon-trash:before {
+    content: "\F115";
+}
+.fonticon-email:before {
+    content: "\F116";
+}
+.fonticon-permissions:before {
+    content: "\F117";
+}
+.fonticon-close:before {
+    content: "\F118";
+}
+.fonticon-server:before,
+.fonticon-PersistentVMRole:before {
+    content: "\F119";
+}
+.fonticon-server.fonticon-add:before {
+    content: "\F11a";
+}
+.fonticon-server.fonticon-close:before {
+    content: "\F11b";
+}
+.fonticon-server.fonticon-delete:before {
+    content: "\F11c";
+}
+.fonticon-unlocked:before {
+    content: "\F11d";
+}
+.fonticon-locked:before {
+    content: "\F11e";
+}
+.fonticon-checkmark:before {
+    content: "\F11f";
+}
+.fonticon-laptop:before {
+    content: "\F120";
+}
+.fonticon-desktop:before,
+.fonticon-managedclient_computers:before {
+    content: "\F121";
+}
+.fonticon-feedback:before {
+    content: "\F122";
+}
+.fonticon-upload-cloud:before {
+    content: "\F123";
+}
+.fonticon-download-cloud:before {
+    content: "\F124";
+}
+.fonticon-related:before {
+    content: "\F125";
+}
+.fonticon-has-related:before {
+    content: "\F126";
+}
+.fonticon-reload:before {
+    content: "\F127";
+}
+.fonticon-user:before,
+.fonticon-users_overview:before {
+    content: "\F128";
+}
+.fonticon-user.fonticon-locked:before {
+    content: "\F129";
+}
+.fonticon-user.fonticon-unlocked:before {
+    content: "\F12a";
+}
+.fonticon-user.fonticon-inactive:before {
+    content: "\F12b";
+}
+.fonticon-link:before {
+    content: "\F12c";
+}
+.fonticon-connect:before {
+    content: "\F12d";
+}
+.fonticon-shutdown:before {
+    content: "\F12e";
+}
+.fonticon-add:before {
+    content: "\F12f";
+}
+.fonticon-delete:before {
+    content: "\F130";
+}
+.fonticon-widgets:before {
+    content: "\F131";
+}
+.fonticon-application:before,
+.fonticon-managedclient_administration_applications:before,
+.fonticon-managedclient_administration_userapplications:before,
+.fonticon-CloudService:before {
+    content: "\F156";
+}
+.fonticon-paginate-prev:before {
+    content: "\F133";
+}
+.fonticon-paginate-next:before {
+    content: "\F134";
+}
+.fonticon-expand-left:before {
+    content: "\F135";
+}
+.fonticon-retract-left:before {
+    content: "\F136";
+}
+.fonticon-retract-right:before {
+    content: "\F137";
+}
+.fonticon-expand-right:before {
+    content: "\F138";
+}
+.fonticon-cookie:before {
+    content: "\F139";
+}
+.fonticon-phone:before {
+    content: "\F13a";
+}
+.fonticon-inactive:before {
+    content: "\F13b";
+}
+.fonticon-twitter:before {
+    content: "\F13c";
+}
+.fonticon-enhancement:before {
+    content: "\F13d";
+}
+.fonticon-bug:before {
+    content: "\F13e";
+}
+.fonticon-feature:before {
+    content: "\F13f";
+}
+.fonticon-impersonate:before,
+.fonticon-administration_customers_monitor_async:before {
+    content: "\F140";
+}
+.fonticon-help:before {
+    content: "\F141";
+}
+.fonticon-attention:before,
+.fonticon-systemnotification:before {
+    content: "\F142";
+}
+.fonticon-messages:before {
+    content: "\F143";
+}
+.fonticon-message:before {
+    content: "\F144";
+}
+.fonticon-message.fonticon-add:before {
+    content: "\F145";
+}
+.fonticon-group:before {
+    content: "\F146";
+}
+.fonticon-redistribute:before {
+    content: "\F147";
+}
+.fonticon-thumbs-down:before {
+    content: "\F148";
+}
+.fonticon-thumbs-up:before {
+    content: "\F149";
+}
+.fonticon-desktop.fonticon-add:before,
+.fonticon-managedclient_createregistration:before {
+    content: "\F14a";
+}
+.fonticon-desktop.fonticon-close:before,
+.fonticon-managedclient_unregistercomputer:before {
+    content: "\F14b";
+}
+.fonticon-desktop.fonticon-inactive:before {
+    content: "\F14c";
+}
+.fonticon-desktop.fonticon-delete:before {
+    content: "\F14d";
+}
+.fonticon-laptop.fonticon-inactive:before {
+    content: "\F14e";
+}
+.fonticon-notifications:before {
+    content: "\F14f";
+}
+.fonticon-caret-down:before {
+    content: "\F150";
+}
+.fonticon-caret-up:before {
+    content: "\F151";
+}
+.fonticon-caret-left:before {
+    content: "\F152";
+}
+.fonticon-caret-right:before {
+    content: "\F153";
+}
+.fonticon-tag:before {
+    content: "\F154";
+}
+.fonticon-disk:before {
+    content: "\F155";
+}
+.fonticon-service:before,
+.fonticon-CloudServiceRole:before {
+    content: "\F132";
+}
+.fonticon-service.fonticon-inactive:before {
+    content: "\F157";
+}
+.fonticon-disk.fonticon-inactive:before {
+    content: "\F158";
+}
+.fonticon-application.fonticon-inactive:before {
+    content: "\F159";
+}
+.fonticon-server.fonticon-inactive:before,
+.fonticon-PersistentVMRole.fonticon-inactive:before {
+    content: "\F15a";
+}
+.fonticon-light:before,
+.fonticon-governance_cisunburst:before {
+    content: "\F15b";
+}
+.fonticon-dark:before {
+    content: "\F15c";
+}
+.fonticon-firewall:before {
+    content: "\F15d";
+}
+.fonticon-overview:before,
+.fonticon-hosting_cisearch:before {
+    content: "\F15e";
+}
+.fonticon-document-word:before,
+.fonticon-application-msword:before,
+.fonticon-application-vnd-openxmlformats-officedocument-wordprocessingml-document:before {
+    content: "\F15f";
+}
+.fonticon-document-excel:before,
+.fonticon-text-csv:before,
+.fonticon-application-vnd-ms-excel:before,
+.fonticon-application-vnd-openxmlformats-officedocument-spreadsheetml-sheet:before {
+    content: "\F160";
+}
+.fonticon-document-powerpoint:before,
+.fonticon-application-vnd-ms-powerpoint:before,
+.fonticon-application-vnd-openxmlformats-officedocument-presentationml-presentation:before {
+    content: "\F161";
+}
+.fonticon-document-reader:before,
+.fonticon-application-pdf:before {
+    content: "\F162";
+}
+.fonticon-document-default:before,
+.fonticon-application-octet-stream:before,
+.fonticon-text-plain:before {
+    content: "\F163";
+}
+.fonticon-explore:before,
+.fonticon-governance_ciexplorer:before {
+    content: "\F164";
+}
+.fonticon-finance:before,
+.fonticon-governance_overview:before,
+.fonticon-hosting_report:before {
+    content: "\F165";
+}
+.fonticon-placeholder:before,
+.fonticon-helpdesk_riksbyggencustomform:before,
+.fonticon-2617-useraccount:before,
+.fonticon-other:before {
+    content: "\F166";
+}
+.fonticon-switch:before {
+    content: "\F167";
+}
+.fonticon-network:before {
+    content: "\F168";
+}
+.fonticon-back:before {
+    content: "\F169";
+}
+.fonticon-windows:before {
+    content: "\F16a";
+}
+.fonticon-apple:before {
+    content: "\F16b";
+}
+.fonticon-android:before {
+    content: "\F16c";
+}
+.fonticon-password:before {
+    content: "\F16d";
+}
+.fonticon-package-d:before {
+    content: "\F16e";
+}
+.fonticon-package-e:before {
+    content: "\F16f";
+}
+.fonticon-certificate:before {
+    content: "\F170";
+}
+.fonticon-concierge:before {
+    content: "\F171";
+}
+.fonticon-print:before {
+    content: "\F172";
+}
+.fonticon-business-card:before,
+.fonticon-settings_search:before {
+    content: "\F173";
+}
+.fonticon-start:before {
+    content: "\F174";
+}
+.fonticon-translate:before,
+.fonticon-administration_translations:before {
+    content: "\F175";
+}
+.fonticon-status:before {
+    content: "\F176";
+}
+.fonticon-cloud:before {
+    content: "\F177";
+}
+.fonticon-subscribe:before {
+    content: "\F178";
+}
+.fonticon-info:before {
+    content: "\F179";
+}
+.fonticon-info-2:before {
+    content: "\F17a";
+}
+.fonticon-quote:before {
+    content: "\F17b";
+}
+.fonticon-worker:before,
+.fonticon-CloudServiceRoleInstance:before {
+    content: "\F17c";
+}
+.fonticon-spinner:before {
+    content: "\F17d";
+}
+.fonticon-usage:before  {
+    content: "\F17e";
+}
+.fonticon-api:before  {
+    content: "\F17f";
+}
+.fonticon-location:before  {
+    content: "\F180";
+}
+.fonticon-iis:before  {
+    content: "\F181";
+}
+.fonticon-msmq:before  {
+    content: "\F182";
+}
+.fonticon-ftp:before  {
+    content: "\F183";
+}
+.fonticon-provision:before,
+.fonticon-hosting_packages:before  {
+    content: "\F184";
+}
+.fonticon-jump-start:before,
+.fonticon-hosting_usage:before  {
+    content: "\F185";
+}
