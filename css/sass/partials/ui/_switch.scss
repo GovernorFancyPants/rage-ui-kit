@@ -1,0 +1,63 @@
+.rage-switch {
+    position: relative;
+    height: 30px;
+    width: 70px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.active {
+        border-color: $color-bg-normal;
+        .switch {
+            left: 40px;
+            background-color: $color-bg-normal;
+        }
+    }
+    &.disabled {
+        border-color: darken($color-bg-disabled, 10);
+        cursor: default;
+        .switch {
+            background-color: darken($color-bg-disabled, 10);
+            &:before {
+                background-color: $color-bg-disabled;
+            }
+            &:after {
+                background-color: $color-bg-disabled;
+            }
+        }
+    }
+    .switch {
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 100%;
+        background-color: darken($color-bg-disabled, 10);
+        transition: left .2s ease, background-color .2s ease;
+        color: #fff;
+        &:before {
+            content: attr(data-on);
+            position: absolute;
+            margin-left: -40px;
+            top: 0;
+            left: 0;
+            width: 40px;
+            line-height: 26px;
+            border: 1px solid #fff;
+            text-align: center;
+            background-color: lighten($color-bg-normal, 10);
+        }
+        &:after {
+            content: attr(data-off);
+            position: absolute;
+            background-color: $color-bg-disabled;
+            color: #555;
+            top: 0;
+            right: -40px;
+            width: 40px;
+            line-height: 26px;
+            border: 1px solid #fff;
+            text-align: center;
+        }
+    }
+}
