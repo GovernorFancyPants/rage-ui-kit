@@ -6,7 +6,7 @@
     border-radius: 2px;
     overflow: hidden;
     cursor: pointer;
-
+    margin: .5em 0;
     &.active {
         border-color: $color-bg-normal;
         .switch {
@@ -24,6 +24,7 @@
             }
             &:after {
                 background-color: $color-bg-disabled;
+                color: #fff;
             }
         }
     }
