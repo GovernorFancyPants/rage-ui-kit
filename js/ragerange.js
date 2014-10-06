@@ -79,13 +79,16 @@ function RageRange(el, opt_settings) {
         uiSlider.className = 'slider with-labels';
     }
     if (range_setup.input) {
+        var uiInputWrapper = document.createElement('div');
+        uiInputWrapper.className = 'rage-input';
         var uiManualInput = document.createElement('input');
         uiManualInput.type = 'text';
-        uiManualInput.className = 'input';
+        uiManualInput.className = 'custom-input';
         uiManualInput.value = range_setup.startPosition;
 
         uiSliderContainer.className = 'slider-container with-input';
-        uiSliderContainer.appendChild(uiManualInput);
+        uiInputWrapper.appendChild(uiManualInput);
+        uiSliderContainer.appendChild(uiInputWrapper);
     }
 
     // SETTING UP VARIABLES
@@ -135,8 +138,8 @@ function RageRange(el, opt_settings) {
 
         if (position != scalePosition) {
             uiCustRange.value = Math.round(position).toString();
-            if (el.getElementsByClassName('input')[0]) {
-                el.getElementsByClassName('input')[0].value = Math.round(position).toString();
+            if (el.getElementsByClassName('custom-input')[0]) {
+                el.getElementsByClassName('custom-input')[0].value = Math.round(position).toString();
             }
         }
 
@@ -155,8 +158,8 @@ function RageRange(el, opt_settings) {
             uiRange.style.width = getPosition(currentAnchor) / widthMax * 100 + "%";
             range_setup.hook(currentAnchor);
             uiCustRange.value = currentAnchor;
-            if (el.getElementsByClassName('input')[0]) {
-                el.getElementsByClassName('input')[0].value = currentAnchor;
+            if (el.getElementsByClassName('custom-input')[0]) {
+                el.getElementsByClassName('custom-input')[0].value = currentAnchor;
             }
         }
     }
@@ -196,7 +199,7 @@ function RageRange(el, opt_settings) {
             range_setup.hook(currentAnchor);
             uiCustRange.value = currentAnchor;
             if (range_setup.input) {
-                el.getElementsByClassName('input')[0].value = currentAnchor;
+                el.getElementsByClassName('custom-input')[0].value = currentAnchor;
             }
         }
     }
@@ -224,7 +227,7 @@ function RageRange(el, opt_settings) {
         if (position != scalePosition) {
             uiCustRange.value = Math.round(position).toString();
             if (range_setup.input) {
-                el.getElementsByClassName('input')[0].value = Math.round(position).toString();
+                el.getElementsByClassName('custom-input')[0].value = Math.round(position).toString();
             }
         }
 
@@ -234,10 +237,10 @@ function RageRange(el, opt_settings) {
     }
 
     function keyUp(e) {
-        var regulatorPosition = (el.getElementsByClassName('input')[0].value / rangeMax) * 100;
+        var regulatorPosition = (el.getElementsByClassName('custom-input')[0].value / rangeMax) * 100;
         uiHandle.style.left = Math.max(0, Math.min(regulatorPosition, 100)) + "%";
         uiRange.style.width = Math.max(0, Math.min(regulatorPosition, 100)) + "%";
-        uiCustRange.value = el.getElementsByClassName('input')[0].value;
+        uiCustRange.value = el.getElementsByClassName('custom-input')[0].value;
 
         var procent = Math.max(0, Math.min(regulatorPosition, 100));
         var position = rangeMin + (rangeMax - rangeMin) * procent / 100;
@@ -256,7 +259,7 @@ function RageRange(el, opt_settings) {
             range_setup.hook(currentAnchor);
             uiCustRange.value = currentAnchor;
             if (range_setup.input) {
-                el.getElementsByClassName('input')[0].value = currentAnchor;
+                el.getElementsByClassName('custom-input')[0].value = currentAnchor;
             }
         }
     }
@@ -281,7 +284,7 @@ function RageRange(el, opt_settings) {
         if (position != scalePosition) {
             uiCustRange.value = Math.round(position).toString();
             if (range_setup.input) {
-                el.getElementsByClassName('input')[0].value = Math.round(position).toString();
+                el.getElementsByClassName('custom-input')[0].value = Math.round(position).toString();
             }
         }
 
@@ -301,7 +304,7 @@ function RageRange(el, opt_settings) {
             range_setup.hook(currentAnchor);
             uiCustRange.value = currentAnchor;
             if (range_setup.input) {
-                el.getElementsByClassName('input')[0].value = currentAnchor;
+                el.getElementsByClassName('custom-input')[0].value = currentAnchor;
             }
         }
     }
@@ -311,7 +314,7 @@ function RageRange(el, opt_settings) {
     uiHandle.addEventListener("mousedown", mouseDown, false);
     uiHandle.addEventListener("touchmove", touchMove, false);
     if (range_setup.input) {
-        el.getElementsByClassName('input')[0].onblur = keyUp;
+        el.getElementsByClassName('custom-input')[0].onblur = keyUp;
     }
 
     uiSlider.addEventListener("mouseup", sliderClick, false);

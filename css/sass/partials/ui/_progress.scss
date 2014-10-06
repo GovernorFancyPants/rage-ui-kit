@@ -1,0 +1,49 @@
+
+// PROGRESS BARS
+
+@keyframes progress-glare {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.rage-progress {
+    width: 100%;
+    min-width: 200px;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    .progress {
+        position: relative;
+        background-color: #4183c4;
+        height: 100%;
+        border-radius: 5px;
+        &:after {
+            content: "";
+            position: absolute;
+            border-radius: 5px;
+            background: linear-gradient(to right, #4183c4 0%, #3876b4 25%, #3876b4 50%, #4183c4 75%, #689cd0 86%, #689cd0 93%, #4183c4 100%);
+            left: 5px;
+            right: 0;
+            height: 100%;
+            animation: progress-glare 1.4s ease infinite;
+        }
+        &:before {
+            content: attr(data-label);
+            position: absolute;
+            font-size: 11px;
+            color: #aaa;
+            top: 18px;
+            right: -15px;
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+}

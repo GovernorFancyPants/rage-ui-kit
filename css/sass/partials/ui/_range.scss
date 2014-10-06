@@ -1,24 +1,3 @@
-body {
-	font-family: helvetica, arial, sans serfif;
-	line-height: 1.3;
-	background-color: whitesmoke;
-	color: #555;
-	font-size: 12px;
-}
-
-*, :after, :before {
-	box-sizing: border-box;
-}
-
-input, textarea {
-	outline: 0;
-	box-shadow: none!important;
-	padding: 5px;
-	width: 100%;
-	border-width: 0;
-	background: 0 0;
-}
-
 @mixin cf {
 	*zoom: 1;
 	&:before,
@@ -30,38 +9,8 @@ input, textarea {
 			clear: both;
 	}
 }
-.container {
-	width: 80%;
-	min-width: 260px;
-	margin: 3em auto;
-}
-.ui-element {
-	padding: 1.5em;
-	font-size: 13px;
-	background-color: #fff;
-	border: 1px solid #dfdfdf;
-	margin-bottom: 1em;
-	@include cf;
-	.label {
-		font-weight: bold;
-		width: 20%;
-		min-width: 100px;
-		float: left;
-		margin-bottom: 10px;
-	}
-	.lever {
-		width: 80%;
-		float: left;
-	}
 
-}
-
-.checkboxes, .radiobuttons {
-	width: 50%;
-	float: left;
-}
-
-input[type=checkbox].custom-checkbox, input[type=radio].custom-radio, input[type=range].custom-range {
+input[type=range].custom-range {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -71,6 +20,14 @@ input[type=checkbox].custom-checkbox, input[type=radio].custom-radio, input[type
 	margin: 0;
 	outline: none !important;
 	opacity: 0;
+}
+
+body.select-none {
+    user-select: none;
+}
+
+.ragerange, .slider-container {
+    @include cf;
 }
 
 // VARIABLES
@@ -174,7 +131,7 @@ body.select-none {
 		width: 80%;
 		margin-right: 5%;
 	}
-	.input {
+	.rage-input input[type="text"].custom-input {
 		width: 15%;
 		min-width: 50px;
 		float: left;

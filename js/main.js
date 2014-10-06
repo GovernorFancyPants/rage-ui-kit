@@ -5,14 +5,23 @@ var switch4 = new rageSwitch(document.getElementById('switch4'));
 
 function rageSwitch(el) {
     el.addEventListener('click', function() {
-        if (el.classList.contains('disabled')) {
+        if (hasClass(el, 'disabled')) {
             return;
         } else {
-            if (el.classList.contains('active')) {
-                el.classList.remove('active');
+            if (hasClass(el, 'active')) {
+                el.className = el.className.replace(/\bactive\b/, '');
             } else {
-                el.classList.add('active');
+                el.className = el.className + " active ";
             }
         }
     }, true);
+}
+
+function hasClass(element, selector) {
+    var theClass = " " + selector + " ";
+    if ( (" " + element.className + " ").replace(/[\n\t]/g, " ").indexOf(theClass) > -1 ) {
+        return true;
+    } else {
+        return false;
+    }
 }
